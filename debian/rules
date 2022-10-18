@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+
+export DH_RUBY = --gem-install
+export GEM2DEB_TEST_RUNNER = --check-dependencies
+
+%:
+	dh $@ --buildsystem=ruby --with ruby
+
+override_dh_installchangelogs:
+	dh_installchangelogs HISTORY.md
+
+override_dh_auto_install:
+	dh_auto_install
+	debian/copy-gemspec

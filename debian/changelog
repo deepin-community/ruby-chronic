@@ -1,0 +1,108 @@
+ruby-chronic (0.10.5-2) unstable; urgency=medium
+
+  * Team upload.
+  * Reupload to unstable (gitlab in unstable cannot be supported reasonably) 
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 08 Jan 2020 22:07:02 +0530
+
+ruby-chronic (0.10.5-1) experimental; urgency=medium
+
+  * Team upload
+  
+  [ Cédric Boutillier ]
+  * Bump debhelper compatibility level to 9
+  * Remove version in the gem2deb build-dependency
+  * Use https:// in Vcs-* fields
+  * Use https:// in Vcs-* fields
+  * Bump Standards-Version to 3.9.7 (no changes needed)
+  * Run wrap-and-sort on packaging files
+
+  [ Utkarsh Gupta ]
+  * Add salsa-ci.yml
+
+  [ Pirate Praveen ]
+  * New upstream version 0.10.5
+  * Bump Standards-Version to 4.4.1 (no changes needed)
+  * Drop compat file, rely on debhelper-compat and bump compat level to 12
+  * Use salsa.debian.org in Vcs-* fields
+  * Switch to gitlab's fork (original project is unmaintained)
+  * Refresh patches
+  * Provide chronic.gemspec
+  * Use gitlab-chronic in tests
+  * Add ruby-numerizer as dependency
+  * Check dependencies during build
+  * Add comments to patches
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 01 Jan 2020 13:57:43 +0530
+
+ruby-chronic (0.10.2-3) unstable; urgency=medium
+
+  * Team upload
+  * Remove git usage to generate gemsepcs in clean build
+  * Bump standards version to 3.9.6 (no changes)
+
+ -- Pirate Praveen <praveen@debian.org>  Mon, 05 Oct 2015 13:54:59 +0530
+
+ruby-chronic (0.10.2-2) unstable; urgency=low
+
+  * Rebuild for ruby 2.0 as default.
+
+ -- Per Andersson <avtobiff@gmail.com>  Sun, 06 Apr 2014 23:20:51 +0200
+
+ruby-chronic (0.10.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Update to standards version 3.9.5.
+  * Build depend on gem2deb >= 0.6.1.
+  * Update debian/copyright
+    - Add Lee Jarvis to upstream copyright.
+    - Expat license Debian packaging to align with upstream.
+    - Add Cédric Boutillier and update my packaging copyright.
+
+ -- Per Andersson <avtobiff@gmail.com>  Tue, 28 Jan 2014 15:24:55 +0100
+
+ruby-chronic (0.9.1-1) unstable; urgency=low
+
+  * Team upload.
+  * New upstream release.
+  * Update to standards version 3.9.4.
+  * Add ruby-minitests to build depends.
+  * Drop transitional packages.
+
+  [ Per Andersson]
+  * Build depend on gem2deb >= 0.3.0.
+
+ -- Praveen Arimbrathodiyil <praveen@debian.org>  Sun, 19 May 2013 22:21:31 +0200
+
+ruby-chronic (0.6.7-2) unstable; urgency=low
+
+  * Relax conflicts of transitional packages to breaks.
+
+ -- Per Andersson <avtobiff@gmail.com>  Sat, 09 Jun 2012 00:16:15 +0200
+
+ruby-chronic (0.6.7-1) unstable; urgency=low
+
+  * New maintainer. (Closes: #660501)
+  * New upstream version. (Closes: #578467, #542491)
+  * Bumped standards version to 3.9.3 (no changes needed).
+  * Changed to gem2deb packaging.
+    - Rename source and binary packages to ruby-chronic.
+    - Add libchronic-ruby transitional package.
+    - Run tests during build.
+    - BUild for all ruby versions.
+  * Cosmetic update of description.
+  * Update copyright file to DEP-5 format.
+  * Use source format 3.0 (quilt).
+  * Add watch file.
+  * Update docs.
+    - README.txt renamed README.md.
+    - Add HISTORY.md.
+
+ -- Per Andersson <avtobiff@gmail.com>  Sun, 15 Apr 2012 12:46:15 +0200
+
+libchronic-ruby (0.2.3-1) unstable; urgency=low
+
+  * Initial release (Closes: #488855)
+
+ -- Decklin Foster <decklin@red-bean.com>  Thu, 19 Jun 2008 20:05:48 -0400
+

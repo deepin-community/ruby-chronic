@@ -1,0 +1,33 @@
+Source: ruby-chronic
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Per Andersson <avtobiff@gmail.com>
+Build-Depends: debhelper-compat (= 12),
+               gem2deb,
+               ruby-minitest,
+               ruby-numerizer (>= 0.2~),
+Standards-Version: 4.4.1
+Vcs-Git: https://salsa.debian.org/ruby-team/ruby-chronic.git
+Vcs-Browser: https://salsa.debian.org/ruby-team/ruby-chronic
+Homepage: https://gitlab.com/gitlab-org/gitlab-chronic
+Testsuite: autopkgtest-pkg-ruby
+XS-Ruby-Versions: all
+Rules-Requires-Root: no
+
+Package: ruby-chronic
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ruby | ruby-interpreter,
+         ruby-numerizer (>= 0.2~),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Provides: ruby-gitlab-chronic (=${source:Version})
+Description: natural language date parser
+ Chronic is a natural language date/time parser written in pure Ruby.
+ .
+ Chronic can parse a huge variety of date and time formats. Parsing is case
+ insensitive and will handle common abbreviations and misspellings.
+ .
+ This package provides gitlab's fork of chronic (original project is
+ unmaintained).

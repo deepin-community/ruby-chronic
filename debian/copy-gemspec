@@ -1,0 +1,10 @@
+#!/bin/sh
+# provide chronic
+version=$(dpkg-parsechangelog -SVersion | cut -d- -f1)
+mkdir -p debian/ruby-chronic/usr/share/rubygems-integration/all/gems/chronic-${version}/lib
+ln -s ../../gitlab-chronic-${version}/lib/gitlab-chronic.rb \
+debian/ruby-chronic/usr/share/rubygems-integration/all/gems/chronic-${version}/lib/chronic.rb
+cp debian/ruby-chronic/usr/share/rubygems-integration/all/specifications/gitlab-chronic-${version}.gemspec \
+debian/ruby-chronic/usr/share/rubygems-integration/all/specifications/chronic-${version}.gemspec
+sed -i 's/"gitlab-chronic"/"chronic"/' debian/ruby-chronic/usr/share/rubygems-integration/all/specifications/chronic-${version}.gemspec
+sed -i 's/stub: gitlab-chronic/stub: chronic/' debian/ruby-chronic/usr/share/rubygems-integration/all/specifications/chronic-${version}.gemspec

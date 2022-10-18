@@ -1,0 +1,12 @@
+Bug, upstream: https://gitlab.com/gitlab-org/gitlab-chronic/merge_requests/9
+
+--- a/test/helper.rb
++++ b/test/helper.rb
+@@ -1,6 +1,6 @@
+ unless defined? Chronic
+   $:.unshift File.expand_path('../../lib', __FILE__)
+-  require 'chronic'
++  require 'gitlab-chronic'
+ end
+ 
+ require 'minitest/autorun'

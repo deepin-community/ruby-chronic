@@ -1,0 +1,2 @@
+use-gitlab-chronic-in-tests.patch
+remove-git-in-gemspec.patch
